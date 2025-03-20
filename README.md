@@ -1,54 +1,42 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Recharts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот проект является тестовым заданием, демонстрирующим использование библиотеки **Recharts** для построения графиков в **React** с использованием **TypeScript** и **Vite**.
 
-Currently, two official plugins are available:
+## 🚀 Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Recharts](https://recharts.org/)
 
-## Expanding the ESLint configuration
+## 📦 Установка и запуск
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Клонируйте репозиторий**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   ```sh
+   git clone https://github.com/aleks509/recharts-test-.git
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Запустите проект**
+   ```sh
+   npm run dev
+   ```
+   или
+   ```sh
+   yarn dev
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🌐 Демо на CodeSandbox
+
+Вы также можете просмотреть и протестировать проект онлайн, без установки на локальный компьютер:
+
+👉 **[CodeSandbox – Recharts Test](https://codesandbox.io/p/sandbox/line-chart-width-xaxis-padding-forked-48wjnh)**
+
+## 📊 Использование Recharts
+
+Проект демонстрирует работу с **Recharts**, включая:
+
+- Линейные графики (`<LineChart />`)
+- Использование `Z-Score` для отображения статистических данных
+- Кастомизация точек (`activeDot`, `dot`) с цветовой градиацией
